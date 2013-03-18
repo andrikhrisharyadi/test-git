@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_telkomsigma_itbroadband_model_security_Authority" items="${authoritys}" z="Ll3UoXL4R2N5CilNpd+x5cowXK0=">
+        <table:table data="${authoritys}" id="l_telkomsigma_itbroadband_model_security_Authority" path="/security/roles" z="Kr+G1M8hn76P4AUOds6YpEZcW28=">
+            <table:column id="c_telkomsigma_itbroadband_model_security_Authority_label" property="label" z="O7u9rtI0baUqaQPtAIQBZVrA5c0="/>
+            <table:column id="c_telkomsigma_itbroadband_model_security_Authority_name" property="name" z="v3QE2NUdOhRkUVqCuXH3b2E60jc="/>
+        </table:table>
+    </page:list>
+</div>

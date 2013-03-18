@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_telkomsigma_itbroadband_model_security_Principal" modelAttribute="principal" path="/security/users" versionField="Version" z="a7wgGXhyDOYr+EPMSRC/7NyJE1k=">
+        <field:textarea field="name" id="c_telkomsigma_itbroadband_model_security_Principal_name" required="true" z="WUhzYXkRuppGvjeyUYfkPrPhL9s="/>
+        <field:textarea field="password" id="c_telkomsigma_itbroadband_model_security_Principal_password" required="true" z="KPJYZ/HNpCwwtxbyZHqchlzBW1Q="/>
+        <field:checkbox field="enabled" id="c_telkomsigma_itbroadband_model_security_Principal_enabled" z="QQZyk2KbG97S/1FGn0g/VYxhIwY="/>
+        <field:select field="roles" id="c_telkomsigma_itbroadband_model_security_Principal_roles" itemValue="id" items="${authoritys}" multiple="true" path="/security/roles" z="Z2gLvL5xU6vwAGX4lCkToxmZUOs="/>
+    </form:update>
+</div>
