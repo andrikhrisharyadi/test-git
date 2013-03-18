@@ -25,6 +25,22 @@ privileged aspect Principal_Roo_JavaBean {
         this.password = password;
     }
     
+    public String Principal.getPasswordConfirmation() {
+        return this.passwordConfirmation;
+    }
+    
+    public void Principal.setPasswordConfirmation(String passwordConfirmation) {
+        this.passwordConfirmation = passwordConfirmation;
+    }
+    
+    public String Principal.getHashedPassword() {
+        return this.hashedPassword;
+    }
+    
+    public void Principal.setHashedPassword(String hashedPassword) {
+        this.hashedPassword = hashedPassword;
+    }
+    
     public Boolean Principal.getEnabled() {
         return this.enabled;
     }

@@ -5,7 +5,6 @@
     <page:list id="pl_telkomsigma_itbroadband_model_security_Principal" items="${principals}" z="DpVbyk+J1pN2RJg925nN7SbQ+pU=">
         <table:table data="${principals}" id="l_telkomsigma_itbroadband_model_security_Principal" path="/security/users" z="GYZHFe5aClbn/QEqKF/VNplc/M8=">
             <table:column id="c_telkomsigma_itbroadband_model_security_Principal_name" property="name" z="x0ZSuJ0na2m8F7q3GaTwuKsF9Q0="/>
-            <table:column id="c_telkomsigma_itbroadband_model_security_Principal_password" property="password" z="KJPM1UhSFRMCJfBBwU468xgFAlo="/>
             <table:column id="c_telkomsigma_itbroadband_model_security_Principal_enabled" property="enabled" z="98Q1ZWzwQOTxxVv+GXGj3E5nzRM="/>
             <table:column id="c_telkomsigma_itbroadband_model_security_Principal_roles" property="roles" z="wbUI5ogmrYrMNtdYgVYNygwK3xw="/>
         </table:table>

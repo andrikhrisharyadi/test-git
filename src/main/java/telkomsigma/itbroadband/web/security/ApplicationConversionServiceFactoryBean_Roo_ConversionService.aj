@@ -41,7 +41,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Principal, String> ApplicationConversionServiceFactoryBean.getPrincipalToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<telkomsigma.itbroadband.model.security.Principal, java.lang.String>() {
             public String convert(Principal principal) {
-                return new StringBuilder().append(principal.getName()).append(' ').append(principal.getPassword()).toString();
+                return new StringBuilder().append(principal.getName()).append(' ').append(principal.getPassword()).append(' ').append(principal.getPasswordConfirmation()).append(' ').append(principal.getHashedPassword()).toString();
             }
         };
     }

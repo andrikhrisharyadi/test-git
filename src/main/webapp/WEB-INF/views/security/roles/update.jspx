@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_telkomsigma_itbroadband_model_security_Authority" modelAttribute="authority" path="/security/roles" versionField="Version" z="hd0IrhAhjCXNgY9PppRiQ+xblAU=">
-        <field:input field="label" id="c_telkomsigma_itbroadband_model_security_Authority_label" max="10" min="8" required="true" z="AP/AjkNyyYdcFznesr7Pd7hrshs="/>
-        <field:textarea field="name" id="c_telkomsigma_itbroadband_model_security_Authority_name" required="true" validationRegex="^ROLE_[A-Z]*" z="yY2pu1p5B3SPeWiXw6etwcCnIG0="/>
+        <field:input field="label" id="c_telkomsigma_itbroadband_model_security_Authority_label" required="true" z="PVN09zXzW6y9sR4XoTXPC6tv3Y0="/>
+        <field:input field="name" id="c_telkomsigma_itbroadband_model_security_Authority_name" max="20" min="6" required="true" validationRegex="^ROLE_[A-Z]*" z="6VAtUYqp0fbY8RSgymnuVNHXdEU="/>
     </form:update>
 </div>

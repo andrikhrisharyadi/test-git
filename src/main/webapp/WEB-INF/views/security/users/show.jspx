@@ -4,7 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_telkomsigma_itbroadband_model_security_Principal" object="${principal}" path="/security/users" z="WCh8XskqWXbfrg4UHg8XMd3Mpy0=">
         <field:display field="name" id="s_telkomsigma_itbroadband_model_security_Principal_name" object="${principal}" z="rMcDkltpUXQO7zaIx4CJSnjOpBw="/>
-        <field:display field="password" id="s_telkomsigma_itbroadband_model_security_Principal_password" object="${principal}" z="G3ginqj5kcC3h4Y7xoasm7FqG/4="/>
         <field:display field="enabled" id="s_telkomsigma_itbroadband_model_security_Principal_enabled" object="${principal}" z="APB0bfE8AR3lmeAQUlvkY7+4gvY="/>
         <field:display field="roles" id="s_telkomsigma_itbroadband_model_security_Principal_roles" object="${principal}" z="B5ObFG2fYTHu/FCEJvRPt9oK8Xc="/>
     </page:show>

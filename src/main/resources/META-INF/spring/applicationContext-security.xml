@@ -16,29 +16,38 @@
         <intercept-url pattern="/**" access="permitAll" />
     </http>
 
+	<beans:bean id="passwordEncoder" class="org.springframework.security.crypto.password.StandardPasswordEncoder">
+		<beans:constructor-arg value="1tBro4DbanD" />
+	</beans:bean>
+
 	<!-- Configure Authentication mechanism -->
 	<authentication-manager alias="authenticationManager">
 		<authentication-provider>
-			<password-encoder hash="sha-256" />
+			<password-encoder ref="passwordEncoder" />
 
 			<jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query="
-					SELECT name, password, enabled
-					FROM users WHERE name = ?"
+                    SELECT name AS username, hashed_password AS password, enabled 
+                    FROM users WHERE name = ? "
 
 				authorities-by-username-query="
-					SELECT u.name, r.name
-					FROM users u, roles r, users_roles ur
-					WHERE u.id = ur.user_id
-						AND r.role_id = ur.role_id
-						AND u.name = ?"
+                    SELECT u.name AS username, r.name AS authority 
+                    FROM users u, roles r, users_roles ur 
+                    WHERE u.id = ur.user_id 
+                        AND r.id = ur.role_id 
+                        AND u.name = ? "
 			/>
+<!--
+			SERVICES CANNOT BE ACTIVE MORE THAN ONCE AT THE SAME TIME!
 
-        	<!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
             <user-service>
-                <user name="admin" password="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" authorities="ROLE_ADMIN" />
-                <user name="user" password="04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb" authorities="ROLE_USER" />
+              	<user name="admin" password="2204d6fbfc4650068f8d23ec4ac867eb2b452ecb22b189cc0ddb19aa252ebbfa1654b0307267a732" authorities="ROLE_ADMIN" />
             </user-service>
+-->
         </authentication-provider>
     </authentication-manager>
+
+	<!-- Security event logging -->
+	<beans:bean id="loggerListener" class="org.springframework.security.authentication.event.LoggerListener" />
+
 </beans:beans>

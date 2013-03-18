@@ -3,8 +3,8 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:create id="fc_telkomsigma_itbroadband_model_security_Authority" modelAttribute="authority" path="/security/roles" render="${empty dependencies}" z="FLNkw86EeEJpa5f9J2VUZU/3VWs=">
-        <field:input field="label" id="c_telkomsigma_itbroadband_model_security_Authority_label" max="10" min="8" required="true" z="AP/AjkNyyYdcFznesr7Pd7hrshs="/>
-        <field:textarea field="name" id="c_telkomsigma_itbroadband_model_security_Authority_name" required="true" validationRegex="^ROLE_[A-Z]*" z="yY2pu1p5B3SPeWiXw6etwcCnIG0="/>
+        <field:input field="label" id="c_telkomsigma_itbroadband_model_security_Authority_label" required="true" z="PVN09zXzW6y9sR4XoTXPC6tv3Y0="/>
+        <field:input field="name" id="c_telkomsigma_itbroadband_model_security_Authority_name" max="20" min="6" required="true" validationRegex="^ROLE_[A-Z]*" z="6VAtUYqp0fbY8RSgymnuVNHXdEU="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_telkomsigma_itbroadband_model_security_Authority" render="${not empty dependencies}" z="rcdtQD1SeVc/LsE+V2Wgucg5G14="/>
 </div>
