@@ -22,6 +22,7 @@
 
 	<!-- Configure Authentication mechanism -->
 	<authentication-manager alias="authenticationManager">
+		<!-- First way -->
 		<authentication-provider>
 			<password-encoder ref="passwordEncoder" />
 
@@ -37,14 +38,18 @@
                         AND r.id = ur.role_id 
                         AND u.name = ? "
 			/>
-<!--
-			SERVICES CANNOT BE ACTIVE MORE THAN ONCE AT THE SAME TIME!
-
-            <user-service>
-              	<user name="admin" password="2204d6fbfc4650068f8d23ec4ac867eb2b452ecb22b189cc0ddb19aa252ebbfa1654b0307267a732" authorities="ROLE_ADMIN" />
-            </user-service>
--->
         </authentication-provider>
+	
+		<!-- Another way if previous way is failed -->
+		<authentication-provider>
+			<password-encoder hash="sha-256" />
+
+			<!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
+            <user-service>
+              	<user name="admin" password="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+
     </authentication-manager>
 
 	<!-- Security event logging -->
